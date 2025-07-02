@@ -15,7 +15,22 @@ import {
   Gift,
   Sparkles,
   Phone,
-  CheckCircle
+  CheckCircle,
+  FileText,
+  Calculator,
+  Receipt,
+  Mail,
+  Globe,
+  Brain,
+  Diamond,
+  Shield,
+  Target,
+  PlayCircle,
+  TrendingUp,
+  Briefcase,
+  DollarSign,
+  BadgeCheck,
+  Package
 } from 'lucide-react';
 
 const mainBonuses = [
@@ -36,6 +51,103 @@ const mainBonuses = [
     title: 'KoalaCart — Sell like a pro',
     description: 'Our ThriveCart-style platform for professional online selling',
     gradient: 'from-purple-500 to-pink-500'
+  }
+];
+
+const businessTools = [
+  {
+    icon: FileText,
+    title: 'AI Proposal & Contract Writer',
+    description: 'Generate legally sound, customizable client proposals and contracts with one prompt — includes e-sign and send.',
+    gradient: 'from-indigo-500 to-purple-500'
+  },
+  {
+    icon: Calculator,
+    title: 'Offer Optimizer & Price Calculator',
+    description: 'Plug in your offer → AI calculates best price, positioning, bonuses, scarcity elements, and compares it against competitors.',
+    gradient: 'from-green-500 to-emerald-500'
+  },
+  {
+    icon: Receipt,
+    title: 'Invoice & Client Tracker',
+    description: 'Track payments, send branded invoices, follow up on due payments — with automated reminders and client notes built-in.',
+    gradient: 'from-blue-500 to-indigo-500'
+  },
+  {
+    icon: Mail,
+    title: 'Cold Outreach Launcher (Email + DM)',
+    description: 'Find leads + generate icebreaker emails, DMs, and follow-ups with personalization — all in one dashboard.',
+    gradient: 'from-pink-500 to-red-500'
+  },
+  {
+    icon: Globe,
+    title: 'Portfolio Website Template',
+    description: 'Professional, conversion-optimized portfolio templates that showcase your work and attract high-value clients.',
+    gradient: 'from-cyan-500 to-blue-500'
+  }
+];
+
+const exclusiveCreatorBonuses = [
+  {
+    icon: Brain,
+    title: '🧠 1-on-1 Live Mastermind with MD',
+    description: 'A deep strategy session with MD personally guiding you on niche, monetization, growth & positioning inside xBesh.',
+    badge: 'Very Limited Spots',
+    gradient: 'from-purple-600 to-indigo-600'
+  },
+  {
+    icon: Diamond,
+    title: '💎 Exclusive Access to the Creator Circle Community',
+    description: 'Private inner circle group with top-performing creators, early access to features, collab rooms, and exclusive Q&As.',
+    gradient: 'from-pink-600 to-purple-600'
+  },
+  {
+    icon: Shield,
+    title: '🔐 First-Mover Badge in xBesh Marketplace',
+    description: 'Exclusive recognition as an early adopter with special marketplace privileges and enhanced credibility.',
+    gradient: 'from-emerald-600 to-teal-600'
+  },
+  {
+    icon: Target,
+    title: '🎯 Feature Priority Access (Roadmap Voting Rights)',
+    description: 'Get first access to unreleased features + ability to influence what we build next.',
+    gradient: 'from-orange-600 to-red-600'
+  },
+  {
+    icon: PlayCircle,
+    title: '🎥 Personal Creator Promo Video (Done-for-You)',
+    description: 'We\'ll make a short branded video that promotes your services or profile — perfect for socials, ads, and email outreach.',
+    gradient: 'from-blue-600 to-cyan-600'
+  },
+  {
+    icon: TrendingUp,
+    title: '🛍️ Featured Placement in Marketplace (7 Days Spotlight)',
+    description: 'Your profile/services will be featured on top for 7 days after launch — early traction = early clients.',
+    gradient: 'from-violet-600 to-purple-600'
+  },
+  {
+    icon: Briefcase,
+    title: '💼 DFY Portfolio Setup by xBesh Team',
+    description: 'We\'ll set up your profile, services, bio, branding, and even connect your domain — so you launch without tech stress.',
+    gradient: 'from-green-600 to-emerald-600'
+  },
+  {
+    icon: DollarSign,
+    title: '💰 Lifetime Commission on Marketplace Referrals',
+    description: 'Get a unique referral code — earn % whenever anyone joins the Marketplace from your invite (passive income).',
+    gradient: 'from-yellow-600 to-orange-600'
+  },
+  {
+    icon: BadgeCheck,
+    title: '🧾 Pre-Approved Creator Certification',
+    description: 'A premium badge of trust that shows you\'ve been verified by the xBesh team as a service provider — increases conversions.',
+    gradient: 'from-indigo-600 to-blue-600'
+  },
+  {
+    icon: Package,
+    title: '🧨 Creator\'s Launch Toolkit',
+    description: 'High-converting templates, email swipes, social post scripts, offer creation checklist, price calculator — everything you need to launch your first service fast.',
+    gradient: 'from-red-600 to-pink-600'
   }
 ];
 
@@ -150,6 +262,97 @@ const Bonuses = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Exclusive Creator Bonuses */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600/10 to-pink-600/10 border border-purple-600/20 text-purple-300 px-6 py-3 rounded-full mb-6">
+              <Crown className="w-5 h-5" />
+              <span className="font-bold">🎁 10 POWERFUL EXCLUSIVE BONUSES</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Beyond Apps — Creator & Marketer Perks
+            </h3>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Exclusive opportunities and resources designed specifically for xBesh AI Creators & Marketers
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {exclusiveCreatorBonuses.map((bonus, index) => {
+              const IconComponent = bonus.icon;
+              return (
+                <div key={index} className="group relative">
+                  {/* Glow effect */}
+                  <div className={`absolute -inset-1 bg-gradient-to-r ${bonus.gradient} rounded-3xl blur opacity-15 group-hover:opacity-35 transition duration-500`}></div>
+                  
+                  <div className="relative bg-gray-800/40 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/30 shadow-2xl transition-all duration-500 hover:scale-105 h-full">
+                    <div className="flex items-start space-x-4">
+                      <div className={`flex-shrink-0 w-14 h-14 bg-gradient-to-r ${bonus.gradient} rounded-2xl flex items-center justify-center shadow-lg`}>
+                        <IconComponent className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-3">
+                          <h4 className="text-lg font-bold text-white leading-tight">
+                            {bonus.title}
+                          </h4>
+                          {bonus.badge && (
+                            <span className="ml-2 px-3 py-1 bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-bold rounded-full whitespace-nowrap">
+                              {bonus.badge}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          {bonus.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Business Automation Tools */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 text-emerald-400 px-6 py-3 rounded-full mb-6">
+              <Zap className="w-5 h-5" />
+              <span className="font-bold">🛠️ BUSINESS AUTOMATION TOOLS</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Complete Business Suite
+            </h3>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to run a professional development business — from proposals to payments
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {businessTools.map((tool, index) => {
+              const IconComponent = tool.icon;
+              return (
+                <div key={index} className="group relative">
+                  {/* Glow effect */}
+                  <div className={`absolute -inset-1 bg-gradient-to-r ${tool.gradient} rounded-3xl blur opacity-15 group-hover:opacity-35 transition duration-500`}></div>
+                  
+                  <div className="relative bg-gray-800/40 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/30 shadow-2xl transition-all duration-500 hover:scale-105 h-full">
+                    <div className={`w-14 h-14 bg-gradient-to-r ${tool.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
+                      <IconComponent className="w-7 h-7 text-white" />
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-4">
+                      {tool.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {tool.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Divider */}
