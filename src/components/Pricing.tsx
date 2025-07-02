@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Check, Star, Zap, Shield, Crown, Sparkles } from 'lucide-react';
 
 const pricingPlans = [

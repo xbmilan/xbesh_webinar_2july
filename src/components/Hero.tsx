@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Sparkles, Code, Zap } from 'lucide-react';
 
 const Hero = () => {
