@@ -1,8 +1,8 @@
-import { ArrowRight, Sparkles, Code, Zap, Play } from 'lucide-react';
+import { ArrowRight, Sparkles, Code, Zap } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-purple-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-950 via-gray-900 to-purple-950 pt-4 pb-4" style={{ paddingTop: '84px', paddingBottom: '84px' }}>
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
@@ -23,11 +23,11 @@ const Hero = () => {
           <Zap className="w-10 h-10 text-blue-400/30" />
         </div>
         <div className="absolute bottom-20 right-20 animate-float-delayed">
-          <Play className="w-7 h-7 text-purple-400/30" />
+          <Sparkles className="w-7 h-7 text-purple-400/30" />
         </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-8 pb-8">
         {/* Enhanced Badge */}
         <div className="inline-block mb-8 group">
           <div className="relative">
@@ -59,9 +59,8 @@ const Hero = () => {
           <span className="text-purple-300 font-medium">Join 10,000+ developers building the future.</span>
         </p>
 
-        {/* Enhanced CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 mb-16">
-          {/* Primary CTA */}
+        {/* Enhanced CTA Button */}
+        <div className="flex items-center justify-center mb-16">
           <a
             href="#pricing"
             className="group relative overflow-hidden"
@@ -72,12 +71,6 @@ const Hero = () => {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </div>
           </a>
-
-          {/* Secondary CTA */}
-          <button className="group relative overflow-hidden bg-gray-800/50 backdrop-blur-xl border-2 border-gray-600/50 text-white px-12 py-6 rounded-2xl font-semibold text-xl flex items-center space-x-4 shadow-2xl transition-all duration-300 hover:border-purple-500/50 hover:bg-gray-700/50 hover:scale-105">
-            <Play className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-            <span>Watch Demo</span>
-          </button>
         </div>
 
         {/* Enhanced Social Proof */}
