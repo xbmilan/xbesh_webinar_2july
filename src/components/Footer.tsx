@@ -145,9 +145,10 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6 text-gray-400 text-sm">
-              <span>© 2024 xBesh Labs, LLC. All rights reserved.</span>
-              <a href="#" className="hover:text-purple-400 transition-colors duration-300">Privacy Policy</a>
-              <a href="#" className="hover:text-purple-400 transition-colors duration-300">Terms of Service</a>
+              <span>© 2025 xBesh Labs, LLC. All rights reserved.</span>
+              <a href="https://www.xbesh.com/policies#privacy" target='_blank' className="hover:text-purple-400 transition-colors duration-300">Privacy Policy</a>
+              <a href="https://www.xbesh.com/terms" target='_blank' className="hover:text-purple-400 transition-colors duration-300">Terms of Service</a>
+              <a href="https://www.xbesh.com/disclaimer" target='_blank' className="hover:text-purple-400 transition-colors duration-300">Disclaimer</a>
             </div>
             
             <div className="flex items-center space-x-3 text-gray-400">

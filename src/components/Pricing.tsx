@@ -1,5 +1,4 @@
-import React from 'react';
-import { Check, Star, Zap, Shield, Crown, Sparkles, Flame } from 'lucide-react';
+import { Check, Zap, Shield, Crown, Sparkles} from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 
 const pricingPlans = [
