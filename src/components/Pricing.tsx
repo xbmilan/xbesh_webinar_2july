@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Check, Zap, Shield, Crown, Sparkles } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 
