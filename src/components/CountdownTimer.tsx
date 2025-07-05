@@ -10,9 +10,8 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Set countdown to 7 days from now
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7);
+    // Set countdown to July 11, 2025 at 11:59 PM Eastern Time
+    const targetDate = new Date('2025-07-11T23:59:59-04:00'); // EDT (UTC-4)
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -25,6 +24,8 @@ const CountdownTimer = () => {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
         });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     }, 1000);
 
@@ -32,7 +33,7 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative mb-16">
       <div className="absolute -inset-2 bg-gradient-to-r from-red-600/30 via-orange-600/30 to-yellow-600/30 rounded-3xl blur-xl animate-pulse"></div>
       <div className="relative bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 backdrop-blur-2xl rounded-3xl p-8 border border-red-500/20 shadow-2xl">
         <div className="text-center">

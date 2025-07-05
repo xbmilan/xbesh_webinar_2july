@@ -1,4 +1,5 @@
-import { Check, Zap, Shield, Crown, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Check, Star, Zap, Shield, Crown, Sparkles, Flame } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 
 const pricingPlans = [
@@ -101,9 +102,7 @@ const Pricing = () => {
         </div>
 
         {/* Countdown Timer */}
-        <div className="mb-20">
-          <CountdownTimer />
-        </div>
+        <CountdownTimer />
 
         {/* Enhanced Features Section */}
         <div className="relative mb-20">

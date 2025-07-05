@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles, Code, Zap } from 'lucide-react';
+import CountdownTimer from './CountdownTimer';
 
 const Hero = () => {
   return (
@@ -58,6 +59,9 @@ const Hero = () => {
           <br />
           <span className="text-purple-300 font-medium">Join 10,000+ developers building the future.</span>
         </p>
+
+        {/* Countdown Timer */}
+        <CountdownTimer />
 
         {/* Enhanced CTA Button */}
         <div className="flex items-center justify-center mb-16">

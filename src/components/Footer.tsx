@@ -46,7 +46,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://app.xbesh.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 flex items-center space-x-2">
+                <a href="https://xbesh.dev" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 flex items-center space-x-2">
                   <Globe className="w-4 h-4" />
                   <span>Launch App</span>
                 </a>
