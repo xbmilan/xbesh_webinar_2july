@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, Star, Zap, Shield, Crown, Sparkles } from 'lucide-react';
+import CountdownTimer from './CountdownTimer';
 
 const pricingPlans = [
   {
@@ -98,6 +99,11 @@ const Pricing = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
             One powerful license, multiple payment options. Choose the plan that works best for your budget and workflow.
           </p>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="mb-20">
+          <CountdownTimer />
         </div>
 
         {/* Enhanced Features Section */}

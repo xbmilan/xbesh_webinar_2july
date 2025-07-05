@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, MessageCircle, Globe, Shield, Heart } from 'lucide-react';
 
 const Footer = () => {
