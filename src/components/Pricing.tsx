@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Check, Star, Zap, Shield, Crown, Sparkles } from 'lucide-react';
 
 const pricingPlans = [
@@ -70,136 +70,154 @@ const features = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20"></div>
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <section id="pricing" className="py-32 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 relative overflow-hidden">
+      {/* Enhanced Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+      </div>
       
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        {/* Enhanced Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/20 text-purple-400 px-4 py-2 rounded-full mb-6">
-            <Star className="w-4 h-4" />
-            <span className="text-sm font-medium">Flexible Pricing Options</span>
+          <div className="inline-block mb-8">
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-purple-500/20 rounded-2xl px-8 py-4">
+              <span className="text-purple-400 font-semibold text-sm tracking-wider uppercase">Pricing</span>
+            </div>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
             Choose Your
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"> Perfect Plan</span>
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Perfect Plan
+            </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
             One powerful license, multiple payment options. Choose the plan that works best for your budget and workflow.
           </p>
         </div>
 
-        {/* Features included */}
-        <div className="bg-gray-800/30 backdrop-blur-xl rounded-3xl p-10 mb-16 border border-gray-700/30 shadow-2xl">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Everything Included in Every Plan
-            </h3>
-            <p className="text-gray-400">No hidden features, no upgrade pressure. Get everything from day one.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 group">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
-                  <Check className="w-4 h-4 text-white" />
+        {/* Enhanced Features Section */}
+        <div className="relative mb-20">
+          <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600/10 via-teal-600/10 to-cyan-600/10 rounded-3xl blur-xl"></div>
+          <div className="relative bg-gray-800/30 backdrop-blur-2xl rounded-3xl p-12 border border-gray-700/30 shadow-2xl">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Everything Included in Every Plan
+              </h3>
+              <p className="text-gray-400 text-lg font-light">
+                No hidden features, no upgrade pressure. Get everything from day one.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-medium text-lg">
+                    {feature}
+                  </span>
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-200 font-medium">{feature}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Vertical Pricing cards */}
+        {/* Enhanced Pricing Cards */}
         <div className="space-y-8">
           {pricingPlans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
               <div
                 key={index}
-                className="relative group transition-all duration-500 hover:scale-[1.02]"
+                className="group relative transition-all duration-500 hover:scale-[1.02]"
               >
-                {/* Glow effect */}
-                <div className={`absolute -inset-1 bg-gradient-to-r ${plan.gradient} rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500`}></div>
+                {/* Enhanced Glow Effect */}
+                <div className={`absolute -inset-2 bg-gradient-to-r ${plan.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition duration-500`}></div>
                 
                 <div
-                  className={`relative bg-gray-800/50 backdrop-blur-xl rounded-3xl shadow-2xl border transition-all duration-500 overflow-visible ${
+                  className={`relative backdrop-blur-2xl rounded-3xl shadow-2xl border transition-all duration-500 overflow-visible ${
                     plan.popular 
-                      ? 'border-purple-500/50 shadow-purple-500/20' 
-                      : 'border-gray-700/30 hover:border-gray-600/50'
+                      ? 'bg-gray-800/60 border-purple-500/50 shadow-purple-500/20' 
+                      : 'bg-gray-800/40 border-gray-700/30 hover:border-gray-600/50'
                   }`}
                 >
-                  {/* Popular badge - Fixed positioning */}
+                  {/* Enhanced Popular Badge */}
                   {plan.popular && (
-                    <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-20">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center space-x-2 shadow-xl border-2 border-white/20">
-                        <Crown className="w-4 h-4" />
-                        <span>Most Popular Choice</span>
+                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
+                      <div className="relative">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-70"></div>
+                        <div className="relative bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full text-sm font-bold flex items-center space-x-2 shadow-2xl border border-white/20">
+                          <Crown className="w-4 h-4" />
+                          <span>Most Popular Choice</span>
+                        </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Savings badge - Fixed positioning */}
+                  {/* Enhanced Savings Badge */}
                   {plan.savings && (
-                    <div className="absolute -top-4 -right-4 z-20">
-                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl border-2 border-white/20 animate-pulse">
-                        {plan.savings}
+                    <div className="absolute -top-5 -right-5 z-20">
+                      <div className="relative">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full blur opacity-70"></div>
+                        <div className="relative bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-2xl border border-white/20 animate-pulse">
+                          {plan.savings}
+                        </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Animated border for popular plan */}
-                  {plan.popular && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-3xl opacity-20 animate-pulse"></div>
-                  )}
-
-                  <div className={`p-10 ${plan.popular ? 'pt-14' : ''}`}>
+                  <div className={`p-12 ${plan.popular ? 'pt-16' : ''}`}>
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-8 lg:space-y-0">
-                      {/* Plan details */}
-                      <div className="flex-1 lg:pr-8">
-                        <div className="flex items-center space-x-4 mb-6">
-                          <div className={`w-16 h-16 bg-gradient-to-r ${plan.gradient} rounded-2xl flex items-center justify-center shadow-lg`}>
-                            <IconComponent className="w-8 h-8 text-white" />
+                      {/* Enhanced Plan Details */}
+                      <div className="flex-1 lg:pr-12">
+                        <div className="flex items-center space-x-6 mb-8">
+                          <div className={`w-20 h-20 bg-gradient-to-r ${plan.gradient} rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300`}>
+                            <IconComponent className="w-10 h-10 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-bold text-white mb-1">
+                            <h3 className="text-3xl font-bold text-white mb-2">
                               {plan.name}
                             </h3>
-                            <p className="text-gray-400 text-lg">
+                            <p className="text-gray-400 text-lg font-light">
                               {plan.description}
                             </p>
                           </div>
                         </div>
                         
-                        <div className="flex items-baseline space-x-2">
-                          <span className="text-5xl font-bold text-white">
+                        <div className="flex items-baseline space-x-3">
+                          <span className="text-6xl font-black text-white">
                             {plan.price}
                           </span>
-                          <span className="text-gray-400 text-lg">
+                          <span className="text-gray-400 text-xl font-light">
                             {plan.period}
                           </span>
                         </div>
                       </div>
 
-                      {/* CTA Button */}
+                      {/* Enhanced CTA Button */}
                       <div className="flex-shrink-0">
                         <a
                           href={plan.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`group relative inline-flex items-center justify-center space-x-3 py-5 px-10 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+                          className={`group/btn relative overflow-hidden inline-flex items-center justify-center space-x-3 py-6 px-12 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 ${
                             plan.popular
-                              ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50'
-                              : 'bg-gray-700/50 text-white hover:bg-gray-600/70 border-2 border-gray-600/50 hover:border-purple-500/50 shadow-xl'
+                              ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50'
+                              : 'bg-gray-700/50 text-white hover:bg-gray-600/70 border-2 border-gray-600/50 hover:border-purple-500/50 shadow-2xl'
                           }`}
                         >
                           <span>Get Started Now</span>
-                          <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                          <Zap className="w-6 h-6 group-hover/btn:rotate-12 transition-transform duration-300" />
                           
-                          {/* Button glow effect */}
+                          {/* Enhanced Button Glow */}
                           {plan.popular && (
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300 -z-10"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-30 group-hover/btn:opacity-50 transition duration-300 -z-10"></div>
                           )}
                         </a>
                       </div>
@@ -211,15 +229,20 @@ const Pricing = () => {
           })}
         </div>
 
-        {/* Money back guarantee */}
-        <div className="mt-20 text-center">
-          <div className="inline-flex items-center space-x-3 bg-green-500/10 border border-green-500/20 text-green-400 px-8 py-4 rounded-2xl backdrop-blur-sm">
-            <Shield className="w-6 h-6" />
-            <span className="font-semibold text-lg">30-day money-back guarantee</span>
+        {/* Enhanced Guarantee Section */}
+        <div className="mt-24 text-center">
+          <div className="relative inline-block">
+            <div className="absolute -inset-2 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl blur"></div>
+            <div className="relative bg-green-500/10 backdrop-blur-xl border border-green-500/20 text-green-400 px-10 py-6 rounded-2xl">
+              <div className="flex items-center space-x-4">
+                <Shield className="w-8 h-8" />
+                <div className="text-left">
+                  <div className="font-bold text-xl">30-day money-back guarantee</div>
+                  <div className="text-green-300/80 text-sm font-light">Try risk-free. If you're not completely satisfied, get a full refund.</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="text-gray-400 mt-4 text-lg">
-            Try risk-free. If you're not completely satisfied, get a full refund.
-          </p>
         </div>
       </div>
     </section>
