@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Clock, Flame } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Flame } from 'lucide-react';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
