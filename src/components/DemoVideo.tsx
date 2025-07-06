@@ -1,4 +1,4 @@
-import { Clock, Users, Star } from 'lucide-react';
+import { Clock, Star } from 'lucide-react';
 
 const DemoVideo = () => {
   return (
