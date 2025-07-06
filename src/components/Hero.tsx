@@ -42,13 +42,11 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Main Headline */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-8 leading-tight tracking-tight">
+        <h1 className="text-6xl md:text-8xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight">
           Build Apps
-          <br />
           <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x">
-            10x Faster
+            {" "}10x Faster{" "}
           </span>
-          <br />
           with AI
         </h1>
 
@@ -59,6 +57,62 @@ const Hero = () => {
           <br />
           <span className="text-purple-300 font-medium">Join 10,000+ developers building the future.</span>
         </p>
+
+        {/* YouTube Video Player */}
+        <div className="max-w-5xl mx-auto mb-12">
+          <div className="relative group">
+            {/* Glow Effect */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 via-purple-600/30 to-pink-600/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+            
+            {/* Video Container */}
+            <div className="relative bg-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-gray-700/50 shadow-2xl">
+              {/* YouTube Embed */}
+              <div className="relative aspect-video">
+                <iframe 
+                  className="w-full h-full rounded-t-3xl"
+                  src="https://www.youtube.com/embed/lDMgZh25K-g?si=Oba4ACUajQI6RCPE" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              {/* Video Info Bar */}
+              <div className="p-6 bg-gray-800/30 backdrop-blur-xl border-t border-gray-700/30">
+                <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                  <div className='text-left'>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Live xBesh Webinar
+                    </h3>
+                    <p className="text-gray-400">
+                      See how xBesh AI transforms natural language into production-ready code
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-white">2:14:37 Hrs</div>
+                      <div className="text-xs text-gray-400">Duration</div>
+                    </div>
+                    <div className="w-px h-12 bg-gray-600"></div>
+                    {/* <div className="text-center">
+                      <div className="text-2xl font-bold text-white">50K+</div>
+                      <div className="text-xs text-gray-400">Views</div>
+                    </div>
+                    <div className="w-px h-12 bg-gray-600"></div>
+                      */}
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-white">4.9★</div>
+                      <div className="text-xs text-gray-400">Rating</div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Countdown Timer */}
         <CountdownTimer />

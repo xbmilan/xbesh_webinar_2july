@@ -6,12 +6,14 @@ import Bonuses from './components/Bonuses';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import SpotAvailability from './components/SpotAvailability';
+// import DemoVideo from './components/DemoVideo';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-900">
       <Hero />
       <SpotAvailability />
+      {/* <DemoVideo /> */}
       <Features />
       <TestimonialsSection />
       <Pricing />
