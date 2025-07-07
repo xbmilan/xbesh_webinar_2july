@@ -6,6 +6,7 @@ import Bonuses from './components/Bonuses';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import SpotAvailability from './components/SpotAvailability';
+import TestimonialImgSection from './components/TestimonialImgSection';
 // import DemoVideo from './components/DemoVideo';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <SpotAvailability />
       {/* <DemoVideo /> */}
+      <TestimonialImgSection />
       <Features />
       <TestimonialsSection />
       <Pricing />

@@ -137,12 +137,12 @@ const Hero = () => {
           <div className="relative bg-gray-800/30 backdrop-blur-2xl rounded-3xl p-8 border border-gray-700/30 shadow-2xl">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
               <div className="text-center">
-                <div className="text-4xl font-black text-white mb-2">10,000+</div>
+                <div className="text-4xl font-black text-white mb-2">2,000+</div>
                 <div className="text-gray-400 font-medium">Active Developers</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-gray-600"></div>
               <div className="text-center">
-                <div className="text-4xl font-black text-white mb-2">1M+</div>
+                <div className="text-4xl font-black text-white mb-2">1k+</div>
                 <div className="text-gray-400 font-medium">Apps Generated</div>
               </div>
               <div className="hidden md:block w-px h-16 bg-gray-600"></div>

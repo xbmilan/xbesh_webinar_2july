@@ -105,7 +105,7 @@ const TestimonialsSection = () => {
             Loved by
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              10,000+ Developers
+              2,000+ Developers
             </span>
           </h2>
           
@@ -203,8 +203,8 @@ const TestimonialsSection = () => {
         {/* Enhanced Stats */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { number: '10,000+', label: 'Happy Developers' },
-            { number: '1M+', label: 'Apps Generated' },
+            { number: '2,000+', label: 'Happy Developers' },
+            { number: '1K+', label: 'Apps Generated' },
             { number: '99.9%', label: 'Satisfaction Rate' }
           ].map((stat, index) => (
             <div key={index} className="text-center group">
